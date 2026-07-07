@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ГО «Лінія згоди» — психосоціальна підтримка дітей, сімей і фахівців. Харків, з 2014</title>
+<meta name="description" content="Громадська організація «Лінія згоди» (Харків, з 2014): навчання фахівців соціальної сфери, психосоціальна підтримка дітей і сімей, практичні методичні інструменти. Досвід з USAID, GIZ, UHF, OCHA/ACTED, Norad.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,600;7..72,700&family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1F3864; --navy-deep:#141F3B; --ink:#1E2534;
+  --orange:#ED7D31; --magenta:#C4157F; --green:#5B9A3C; --blue:#2E74B5;
+  --paper:#FFFFFF; --tint:#EEF3FA; --line:#D8E0EC; --muted:#5B6577;
+  --disp:"Literata",Georgia,serif; --body:"Golos Text",system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto} .reveal{transition:none!important;opacity:1!important;transform:none!important}}
+body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.6;font-size:16.5px}
+a{color:var(--blue)}
+:focus-visible{outline:3px solid var(--orange);outline-offset:2px;border-radius:2px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--magenta);margin-bottom:14px}
+h2{font-family:var(--disp);font-weight:700;font-size:clamp(26px,4vw,38px);color:var(--navy);line-height:1.2;margin-bottom:18px}
+.lead{font-size:18px;color:var(--muted);max-width:62ch}
+section{padding:84px 0}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav-i{display:flex;align-items:center;justify-content:space-between;height:62px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand-dots{display:flex;gap:3px}
+.brand-dots span{width:9px;height:9px;border-radius:50%}
+.brand b{font-family:var(--disp);font-size:19px;color:var(--navy)}
+.nav-l{display:flex;gap:26px;align-items:center}
+.nav-l a{text-decoration:none;color:var(--ink);font-size:14.5px;font-weight:500}
+.nav-l a:hover{color:var(--magenta)}
+.btn{display:inline-block;padding:11px 22px;border-radius:8px;font-weight:600;font-size:15px;text-decoration:none;transition:transform .15s ease, box-shadow .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-solid{background:var(--orange);color:#fff!important;box-shadow:0 4px 14px rgba(237,125,49,.35)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.5);color:#fff!important}
+.btn-navy{background:var(--navy);color:#fff!important}
+@media(max-width:820px){.nav-l a:not(.btn){display:none}}
+
+/* hero */
+header.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-deep) 100%);color:#fff;padding:96px 0 110px;position:relative;overflow:hidden}
+.hero .eyebrow{color:#AEC2E3}
+.hero h1{font-family:var(--disp);font-weight:700;font-size:clamp(34px,5.6vw,58px);line-height:1.13;max-width:18ch}
+.hero h1 em{font-style:normal;color:var(--orange)}
+.hero p.sub{margin:26px 0 36px;font-size:19px;color:#D9E2F2;max-width:56ch}
+.hero-badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:44px}
+.hero-badges span{font-size:13px;color:#C4D2EA;border:1px solid rgba(255,255,255,.22);padding:7px 14px;border-radius:99px}
+.ribbon{position:absolute;right:-40px;top:-40px;width:340px;height:340px;opacity:.5;pointer-events:none}
+@media(max-width:640px){.ribbon{display:none}}
+
+/* stats strip */
+.stats{background:var(--tint);padding:44px 0}
+.stats-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:26px;text-align:center}
+.stat b{display:block;font-family:var(--disp);font-size:40px;line-height:1;color:var(--navy)}
+.stat i{font-style:normal;font-size:13.5px;color:var(--muted);display:block;margin-top:8px}
+.stat:nth-child(1) b{color:var(--orange)}.stat:nth-child(2) b{color:var(--magenta)}
+.stat:nth-child(3) b{color:var(--green)}.stat:nth-child(4) b{color:var(--blue)}.stat:nth-child(5) b{color:var(--orange)}
+
+/* about */
+.two{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:start}
+@media(max-width:820px){.two{grid-template-columns:1fr}}
+.about p+p{margin-top:16px}
+.about strong{color:var(--navy)}
+.photo-ph{background:var(--tint);border:1.5px dashed var(--line);border-radius:14px;min-height:280px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:14px;text-align:center;padding:20px}
+
+/* cards */
+.grid{display:grid;gap:22px}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+@media(max-width:900px){.g4{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.g4,.g3,.g2{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px;box-shadow:0 2px 10px rgba(31,56,100,.05)}
+.card h3{font-size:17px;color:var(--navy);margin:14px 0 8px;line-height:1.35}
+.card p{font-size:14.5px;color:var(--muted)}
+.dot-ic{width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:21px;color:#fff}
+.c-o{background:var(--orange)}.c-m{background:var(--magenta)}.c-g{background:var(--green)}.c-b{background:var(--blue)}
+.sec-tint{background:var(--tint)}
+.sec-tint .card{border-color:transparent}
+
+/* mission */
+.mission-box{background:var(--navy);color:#fff;border-radius:18px;padding:42px 46px;font-family:var(--disp);font-size:clamp(19px,2.6vw,25px);line-height:1.5;font-weight:500}
+.mission-box em{font-style:normal;color:var(--orange)}
+@media(max-width:640px){.mission-box{padding:30px 24px}}
+
+/* timeline — signature */
+.tl{position:relative;margin-top:48px;padding-left:34px}
+.tl::before{content:"";position:absolute;left:9px;top:6px;bottom:6px;width:4px;border-radius:4px;
+  background:linear-gradient(180deg,var(--orange),var(--magenta) 33%,var(--green) 66%,var(--blue))}
+.tl-i{position:relative;padding:0 0 34px 22px}
+.tl-i:last-child{padding-bottom:0}
+.tl-i::before{content:"";position:absolute;left:-32px;top:5px;width:18px;height:18px;border-radius:50%;background:#fff;border:5px solid var(--navy)}
+.tl-i:nth-child(4n+1)::before{border-color:var(--orange)}
+.tl-i:nth-child(4n+2)::before{border-color:var(--magenta)}
+.tl-i:nth-child(4n+3)::before{border-color:var(--green)}
+.tl-i:nth-child(4n+4)::before{border-color:var(--blue)}
+.tl-i b{font-family:var(--disp);font-size:19px;color:var(--navy)}
+.tl-i .don{display:inline-block;margin-left:10px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--magenta)}
+.tl-i p{font-size:15px;color:var(--muted);margin-top:4px;max-width:70ch}
+
+/* projects */
+.proj .card{display:flex;flex-direction:column}
+.proj .tag{font-size:11.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;margin-bottom:10px}
+.t-o{color:var(--orange)}.t-m{color:var(--magenta)}.t-g{color:var(--green)}.t-b{color:var(--blue)}
+.proj h3{margin-top:0}
+.proj .meta{font-size:12.5px;color:var(--muted);margin-top:auto;padding-top:14px;border-top:1px solid var(--line)}
+
+/* donors */
+.donor-cols{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+@media(max-width:720px){.donor-cols{grid-template-columns:1fr}}
+.donor-cols h3{font-size:15px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px}
+.donor-cols ul{list-style:none}
+.donor-cols li{padding:10px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+.donor-cols li span{color:var(--muted);font-size:13px}
+
+/* docs */
+.docs a.card{display:flex;gap:14px;align-items:center;text-decoration:none;color:var(--ink)}
+.docs a.card:hover{border-color:var(--blue)}
+.docs .card h3{margin:0 0 3px;font-size:15.5px}
+.docs .card p{font-size:13px}
+
+/* footer / contacts */
+footer{background:var(--navy-deep);color:#C7D3E8;padding:78px 0 46px}
+footer h2{color:#fff}
+.f-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:50px}
+@media(max-width:760px){.f-grid{grid-template-columns:1fr}}
+.f-item{display:flex;gap:12px;margin-bottom:16px;font-size:15.5px}
+.f-item span{flex:none;width:36px;height:36px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;font-size:15px;color:#fff}
+.req{background:rgba(255,255,255,.06);border-radius:14px;padding:24px;font-size:14px;line-height:1.8}
+.req b{color:var(--orange)}
+.f-bottom{margin-top:54px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:13px;color:#8FA0BF}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-i">
+    <a class="brand" href="#top" aria-label="Лінія Згоди — на початок">
+      <span class="brand-dots" aria-hidden="true">
+        <span style="background:var(--orange)"></span><span style="background:var(--magenta)"></span>
+        <span style="background:var(--green)"></span><span style="background:var(--blue)"></span>
+      </span>
+      <b>Лінія Згоди</b>
+    </a>
+    <div class="nav-l">
+      <a href="#about">Про нас</a>
+      <a href="#directions">Напрями</a>
+      <a href="#history">Історія</a>
+      <a href="#projects">Проєкти</a>
+      <a href="#docs">Документи</a>
+      <a class="btn btn-navy" href="#contacts">Стати партнером</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <svg class="ribbon" viewBox="0 0 200 200" aria-hidden="true">
+    <circle cx="60" cy="70" r="34" fill="#ED7D31" opacity=".85"/>
+    <circle cx="120" cy="50" r="26" fill="#C4157F" opacity=".85"/>
+    <circle cx="150" cy="110" r="30" fill="#5B9A3C" opacity=".8"/>
+    <circle cx="90" cy="130" r="22" fill="#2E74B5" opacity=".85"/>
+  </svg>
+  <div class="wrap">
+    <div class="eyebrow">Громадська організація • Харків • з 2014 року</div>
+    <h1>Навчаємо тих, <em>хто допомагає.</em></h1>
+    <p class="sub">«Лінія згоди» зміцнює здатність дітей, сімей і фахівців соціальної сфери проживати кризу та відновлюватися — через навчання, психосоціальну підтримку і практичні інструменти, які працюють у громадах, школах і соціальних службах України.</p>
+    <a class="btn btn-solid" href="#contacts">Стати партнером</a>
+    <a class="btn btn-ghost" href="#projects" style="margin-left:10px">Наші проєкти</a>
+    <div class="hero-badges">
+      <span>Наша сила в тому, що ми різні</span>
+      <span>Неприбуткова організація, ЄДРПОУ 39480178</span>
+      <span>Донори проєктів: USAID • GIZ • UHF • OCHA/ACTED</span>
+    </div>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="wrap stats-g">
+    <div class="stat reveal"><b>12</b><i>років безперервної роботи</i></div>
+    <div class="stat reveal"><b>1&nbsp;400+</b><i>учасників проєктів і заходів</i></div>
+    <div class="stat reveal"><b>140</b><i>фахівців соцслужб навчено (GIZ)</i></div>
+    <div class="stat reveal"><b>9</b><i>міст — проєкт захисту дітей</i></div>
+    <div class="stat reveal"><b>6</b><i>донорів підтримали наші проєкти</i></div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap two">
+    <div class="about reveal">
+      <div class="eyebrow">Про нас</div>
+      <h2>Від волонтерів 2014-го — до інституційного партнера</h2>
+      <p>«Лінія згоди» заснована у травні 2014 року волонтерами, які надавали соціально-психологічну та гуманітарну допомогу людям, що постраждали від війни: ВПО та їхнім дітям, ветеранам та їхнім сім'ям, родинам загиблих.</p>
+      <p>За 12 років ми еволюціонували від прямого гуманітарного реагування до системної роботи. Сьогодні наш фокус — <strong>психічне здоров'я та психосоціальна підтримка (MHPSS)</strong> дітей і сімей, <strong>навчання фахівців помічних професій</strong> та <strong>розробка практичних методичних інструментів</strong>.</p>
+      <p>Ми працюємо в Харкові — прифронтовому регіоні з найвищою потребою у психосоціальній підтримці — та реалізуємо проєкти по всій Україні.</p>
+    </div>
+    <div class="photo-ph reveal">Фото з тренінгу або проєкту<br>(замініть на реальне зображення — це найважливіший блок довіри)</div>
+  </div>
+</section>
+
+<section class="sec-tint" id="mission">
+  <div class="wrap">
+    <div class="eyebrow reveal">Місія</div>
+    <div class="mission-box reveal">«Лінія згоди» зміцнює здатність дітей, сімей і фахівців соціальної сфери проживати кризу та відновлюватися. <em>Ми навчаємо тих, хто допомагає,</em> і створюємо практичні інструменти, які працюють там, де потрібні найбільше.</div>
+    <div class="grid g4" style="margin-top:34px">
+      <div class="card reveal"><div class="dot-ic c-o" aria-hidden="true">🛡</div><h3>Безпека дитини</h3><p>Інтереси та захист дитини — понад усе в кожній активності організації.</p></div>
+      <div class="card reveal"><div class="dot-ic c-m" aria-hidden="true">📖</div><h3>Доказовість</h3><p>Працюємо на основі визнаних методик: ППД, кризове втручання, супервізія.</p></div>
+      <div class="card reveal"><div class="dot-ic c-g" aria-hidden="true">🤝</div><h3>Партнерство</h3><p>Діємо разом із громадами, службами та міжнародними організаціями.</p></div>
+      <div class="card reveal"><div class="dot-ic c-b" aria-hidden="true">💡</div><h3>Практичність</h3><p>Кожен продукт — інструмент, який фахівець може застосувати одразу.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="directions">
+  <div class="wrap">
+    <div class="eyebrow reveal">Що ми робимо</div>
+    <h2 class="reveal">Чотири напрями роботи</h2>
+    <div class="grid g2" style="margin-top:30px">
+      <div class="card reveal"><div class="dot-ic c-o" aria-hidden="true">🎓</div><h3>Розвиток спроможності фахівців</h3><p>Тренінги, семінари та супервізія для соціальних служб, освітян і служб у справах дітей: кризове/екстрене втручання, перша психологічна допомога, психологічна стійкість, профілактика вигорання.</p></div>
+      <div class="card reveal"><div class="dot-ic c-m" aria-hidden="true">🧒</div><h3>Психосоціальна підтримка дітей та сімей</h3><p>Групові й індивідуальні програми для дітей, батьків, ВПО, ветеранських сімей і сімей у кризі — від театральних методик до VR-терапії.</p></div>
+      <div class="card reveal"><div class="dot-ic c-g" aria-hidden="true">📚</div><h3>Методична та видавнича діяльність</h3><p>Розробка, апробація і розповсюдження практичних інструментів: картки, робочі зошити, ігри, пам'ятки, посібники та PDF-матеріали для фахівців і родин.</p></div>
+      <div class="card reveal"><div class="dot-ic c-b" aria-hidden="true">🏛</div><h3>Зміцнення соціальних послуг у громадах</h3><p>Впровадження послуги кризового/екстреного втручання, інструменти для соцслужб, участь у місцевих і державних програмах розвитку.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec-tint" id="history">
+  <div class="wrap">
+    <div class="eyebrow reveal">Історія</div>
+    <h2 class="reveal">Одна безперервна лінія: 2014 → сьогодні</h2>
+    <p class="lead reveal">Ми працювали без перерв — у мирний час, під час пандемії та повномасштабного вторгнення.</p>
+    <div class="tl">
+      <div class="tl-i reveal"><b>2014</b><p>Заснування. Соціально-психологічна допомога ВПО у 6 громадах Харківщини; співорганізація Форуму волонтерів та НУО (Святогірськ).</p></div>
+      <div class="tl-i reveal"><b>2015</b><span class="don">USAID</span><p>«Включи себе в життя»: плейбек-театр для ВПО — 16 вистав, 572 бенефіціари у Харківській і Донецькій областях.</p></div>
+      <div class="tl-i reveal"><b>2016</b><span class="don">USAID</span><p>«Громадянський піксель»: інтерактивний театр для ветеранів; виставка «Переможці»; відкрита зустріч зі Стейнаром Бріном (Нансенська мережа діалогу).</p></div>
+      <div class="tl-i reveal"><b>2016–2017</b><span class="don">GIZ</span><p>Розвиток системи соціально-психологічних послуг: супервізії та навчання 140 фахівців соцслужб у 5 районах Харківщини — перший проєкт такого формату в Україні.</p></div>
+      <div class="tl-i reveal"><b>2017</b><span class="don">USAID</span><p>«Розповідаючи історії ветеранів»: документальний фільм «Додому», вистава «ДПЮ», участь у ГогольFest та фестивалі у Варшаві.</p></div>
+      <div class="tl-i reveal"><b>2018–2020</b><span class="don">NIX Solutions</span><p>«Підвищення ресурсності соціальних служб Харківської області»: дворічна програма навчання фахівців за напрямом позитивної психотерапії.</p></div>
+      <div class="tl-i reveal"><b>2019</b><span class="don">KSE • Посольство США</span><p>Програма підприємництва для ветеранів: 34 учасники, 15 захищених бізнес-планів, 9 діючих мікробізнесів.</p></div>
+      <div class="tl-i reveal"><b>2021</b><span class="don">Coca-Cola Ukraine</span><p>«Створюємо магію разом»: продуктова підтримка вразливих груп у партнерстві з соцслужбами та ГО з 5 міст України.</p></div>
+      <div class="tl-i reveal"><b>2022</b><span class="don">ACTED • OCHA</span><p>Гаряче харчування для ВПО та мешканців Харкова, чиє житло зруйновано; тренінг з інституційної спроможності (ACTED, EU).</p></div>
+      <div class="tl-i reveal"><b>2023–2024</b><span class="don">UHF</span><p>Захист дітей найвищого ризику у 9 містах України — грантоотримувач БФ «Посмішка ЮА» у партнерстві зі Street Child Україна.</p></div>
+      <div class="tl-i reveal"><b>2025</b><span class="don">Тренерська участь</span><p>Тренери організації долучилися до проєкту «Згуртовані заради відновлення» — VR-терапія для ветеранів і ветеранок (проєкт за підтримки GIZ Ukraine, ХОВА та простору «Пліч-о-пліч») — та провели навчання освітян із ППД і сенсорної стабілізації в межах проєкту МБО «СОС Дитячі Містечка» (фінансування Norad).</p></div>
+      <div class="tl-i reveal"><b>2025–2026</b><span class="don">Тренерська участь</span><p>На запрошення ГС «Українська мережа за права дитини» — тренінги для фахівців соціальної роботи громад Харківщини з надання послуги кризового/екстреного втручання.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="proj">
+  <div class="wrap">
+    <div class="eyebrow reveal">Досвід</div>
+    <h2 class="reveal">Вибрані проєкти</h2>
+    <div class="grid g3" style="margin-top:30px">
+      <div class="card reveal"><div class="tag t-o">Захист дітей</div><h3>Підтримка дітей найвищого ризику</h3><p>Послуги із захисту та підтримки дітей у 9 містах: від Чернігова до Запоріжжя.</p><div class="meta">UHF / БФ «Посмішка ЮА» / Street Child • 2023–2024</div></div>
+      <div class="card reveal"><div class="tag t-m">Навчання фахівців</div><h3>Кризове втручання для громад</h3><p>Тренінги для фахівців соцроботи: планування, координація та надання послуги кризового/екстреного втручання.</p><div class="meta">Проєкт ГС «Українська мережа за права дитини» • роль: тренери • 2025–2026</div></div>
+      <div class="card reveal"><div class="tag t-g">Інновації</div><h3>VR-терапія для ветеранів</h3><p>Участь у проєкті «Згуртовані заради відновлення»: психологічна підтримка ветеранів і ветеранок методикою VR-терапії.</p><div class="meta">Проєкт за підтримки GIZ Ukraine • роль: тренери та учасники • 2025</div></div>
+      <div class="card reveal"><div class="tag t-b">Освітяни</div><h3>Стійкість і перша допомога дітям</h3><p>Тренерська експертиза: 3-денна програма практик підтримки, сенсорної стабілізації та саморегуляції для педагогів.</p><div class="meta">Проєкт МБО «СОС Дитячі Містечка» (Norad) • роль: тренери • 2025</div></div>
+      <div class="card reveal"><div class="tag t-o">Соціальні служби</div><h3>Супервізія для тих, хто допомагає</h3><p>Навчання та супервізії для 140 фахівців соцслужб 5 районів Харківщини.</p><div class="meta">GIZ • 2016–2017</div></div>
+      <div class="card reveal"><div class="tag t-m">Гуманітарне реагування</div><h3>Гаряче харчування у Харкові</h3><p>Обіди для ВПО та людей, чиє житло зруйновано, за процедурами міжнародної гуманітарної системи.</p><div class="meta">ACTED / OCHA • 2022</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec-tint" id="partners">
+  <div class="wrap">
+    <div class="eyebrow reveal">Довіра</div>
+    <h2 class="reveal">Донори та партнери</h2>
+    <div class="donor-cols" style="margin-top:26px">
+      <div class="reveal">
+        <h3 style="color:var(--orange)">Донори наших проєктів</h3>
+        <ul>
+          <li>USAID <span>— три проєкти, 2015–2017</span></li>
+          <li>GIZ / Уряд Німеччини <span>— 2016–2017</span></li>
+          <li>Гуманітарний фонд для України (UHF) <span>— через БФ «Посмішка ЮА», 2023–2024</span></li>
+          <li>ACTED / OCHA (ООН) <span>— 2022</span></li>
+          <li>Coca-Cola Ukraine <span>— 2021</span></li>
+          <li>NIX Solutions <span>— 2018–2020</span></li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <h3 style="color:var(--blue)">Партнерства та тренерська участь</h3>
+        <ul>
+          <li>МБО «СОС Дитячі Містечка» (Norad) <span>— тренери програми для освітян, 2025</span></li>
+          <li>«Згуртовані заради відновлення» (GIZ Ukraine, ХОВА, «Пліч-о-пліч») <span>— тренери та учасники, 2025</span></li>
+          <li>ГС «Українська мережа за права дитини» <span>— тренери, 2025–2026</span></li>
+          <li>KSE та Посольство США <span>— партнер програми для ветеранів, 2019</span></li>
+          <li>БФ «Посмішка ЮА», БО «Street Child Україна» <span>— партнери проєкту UHF</span></li>
+          <li>Харківський обласний центр соціальних служб <span>— постійний партнер</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="docs" class="docs">
+  <div class="wrap">
+    <div class="eyebrow reveal">Прозорість</div>
+    <h2 class="reveal">Документи</h2>
+    <p class="lead reveal">Ми відкриті до перевірки: установчі документи, політики та звіти доступні для донорів і партнерів.</p>
+    <div class="grid g3" style="margin-top:28px">
+      <a class="card reveal" href="#"><div><h3>Статут організації</h3><p>Нова редакція, 21.10.2016 (PDF)</p></div></a>
+      <a class="card reveal" href="#"><div><h3>Організаційна структура</h3><p>Керівні органи відповідно до Статуту (PDF)</p></div></a>
+      <a class="card reveal" href="#"><div><h3>Політика захисту дитини</h3><p>Child Safeguarding Policy (PDF)</p></div></a>
+      <a class="card reveal" href="#"><div><h3>Політики організації</h3><p>PSEA, антикорупційна, конфлікт інтересів</p></div></a>
+      <a class="card reveal" href="#"><div><h3>Річний звіт</h3><p>Результати та фінанси за 2025 рік</p></div></a>
+      <a class="card reveal" href="#"><div><h3>Реквізити та виписка</h3><p>ЄДРПОУ 39480178, ознака неприбутковості</p></div></a>
+    </div>
+  </div>
+</section>
+
+<footer id="contacts">
+  <div class="wrap">
+    <h2>Запрошуємо до партнерства</h2>
+    <p style="max-width:60ch;margin-bottom:40px">Шукаємо донорів і партнерів для програм навчання фахівців, психосоціальної підтримки дітей та розробки методичних інструментів. Відповімо протягом двох робочих днів.</p>
+    <div class="f-grid">
+      <div>
+        <div class="f-item"><span aria-hidden="true">✉</span><div><a href="mailto:liniyasoglasiya@gmail.com" style="color:#fff">liniyasoglasiya@gmail.com</a></div></div>
+        <div class="f-item"><span aria-hidden="true">☎</span><div>Керівниця — Наталя Пальчик: <a href="tel:+380675774709" style="color:#fff">+38 067 577-47-09</a><br>Заступниця — Ольга Щербакова: <a href="tel:+380509521312" style="color:#fff">+38 050 952-13-12</a></div></div>
+        <div class="f-item"><span aria-hidden="true">📍</span><div>61153, м. Харків, вул. Гвардійців-Широнінців, 11Б</div></div>
+        <div class="f-item"><span aria-hidden="true">ƒ</span><div><a href="https://www.facebook.com/liniayzgodu" style="color:#fff">facebook.com/liniayzgodu</a></div></div>
+      </div>
+      <div class="req">
+        <b>Підтримати благодійним внеском</b><br>
+        Громадська організація «ЛІНІЯ ЗГОДИ»<br>
+        ЄДРПОУ 39480178 • АТ КБ «ПРИВАТБАНК», МФО 305299<br>
+        IBAN: UA753515330000026002052212153<br>
+        Призначення: «Благодійний внесок на статутні цілі»
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>© 2014–2026 ГО «Лінія Згоди» / NGO «Line of Consent»</span>
+      <span>Наша сила в тому, що ми різні</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
